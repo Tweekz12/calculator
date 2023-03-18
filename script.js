@@ -32,3 +32,11 @@ function operate(op, a, b) {
             break;
     }
 }
+
+const display = document.querySelector('.display');
+let displayValue = '';
+const digitButtons = document.querySelectorAll('.digit');
+[...digitButtons].forEach(b => b.addEventListener('click', e => {
+    displayValue += e.target.innerText;
+    display.innerText = displayValue;
+}))
